@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.canvas.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="901.0" prefWidth="1595.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.SquareController">
+   <children>
+      <HBox layoutX="14.0" layoutY="14.0" prefHeight="870.0" prefWidth="403.0">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <children>
+            <TabPane prefHeight="879.0" prefWidth="403.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab onSelectionChanged="#deleteAll" text="Triangle Squares">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="844.0" prefWidth="403.0">
+                                <items>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="136.0" layoutY="6.0" text="Select Tile Type to Insert" />
+                                          <ImageView fx:id="st1" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="61.0" onMouseClicked="#borderChange1" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st1.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st3" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="236.0" onMouseClicked="#borderChange3" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st3.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st4" fitHeight="100.0" fitWidth="100.0" layoutX="253.0" layoutY="236.0" onMouseClicked="#borderChange4" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st4.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st2" fitHeight="100.0" fitWidth="100.0" layoutX="253.0" layoutY="61.0" onMouseClicked="#borderChange2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st2.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="p1" layoutX="54.0" layoutY="172.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p3" layoutX="54.0" layoutY="343.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p4" layoutX="247.0" layoutY="343.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p2" layoutX="247.0" layoutY="172.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <Label fx:id="L1" layoutX="88.0" layoutY="44.0" text="Selected" />
+                                          <Label fx:id="L3" layoutX="88.0" layoutY="219.0" text="Selected" />
+                                          <Label fx:id="L2" layoutX="281.0" layoutY="44.0" text="Selected" />
+                                          <Label fx:id="L4" layoutX="281.0" layoutY="219.0" text="Selected" />
+                                       </children>
+                                    </AnchorPane>
+                                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Button layoutX="14.0" layoutY="379.0" mnemonicParsing="false" onAction="#back" text="&lt;-Back" />
+                                          <Button layoutX="24.0" layoutY="285.0" mnemonicParsing="false" onAction="#findMazeTriangle" prefHeight="69.0" prefWidth="353.0" text="Find Maze!" textFill="#0cae00">
+                                             <font>
+                                                <Font name="Stencil" size="36.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="23.0" layoutY="209.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="63.0" prefWidth="355.0" text="Delete All Tiles" textFill="#c90000">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="24.0" layoutY="145.0" mnemonicParsing="false" onAction="#deleteTile" prefHeight="54.0" prefWidth="354.0" text="Delete Tile" textFill="#cd0505">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="23.0" layoutY="76.0" mnemonicParsing="false" onAction="#fillTiles" prefHeight="51.0" prefWidth="357.0" text="Fill Tiles" textAlignment="CENTER" textFill="#0f8300">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font>
+                                          </Button>
+                                          <Button layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetProbabilitiesTriangle" prefHeight="48.0" prefWidth="358.0" text="Reset Probabilities" textFill="#9a0000">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </AnchorPane>
+                                </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab onSelectionChanged="#changeImages" text="Dotted Squares">
+                     <content>
+                        <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                           <children>
+                              <SplitPane dividerPositions="0.5" orientation="VERTICAL" prefHeight="844.0" prefWidth="403.0">
+                                 <items>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Label layoutX="136.0" layoutY="6.0" text="Select Tile Type to Insert" />
+                                          <ImageView fx:id="st11" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="61.0" onMouseClicked="#dotChange1" pickOnBounds="true" preserveRatio="true" AnchorPane.rightAnchor="241.0">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st11.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st33" fitHeight="100.0" fitWidth="100.0" layoutX="60.0" layoutY="236.0" onMouseClicked="#dotChange3" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st33.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st44" fitHeight="100.0" fitWidth="100.0" layoutX="253.0" layoutY="236.0" onMouseClicked="#dotChange4" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st44.png" />
+                                             </image>
+                                          </ImageView>
+                                          <ImageView fx:id="st22" fitHeight="100.0" fitWidth="100.0" layoutX="253.0" layoutY="61.0" onMouseClicked="#dotChange2" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../../../../../Pictures/st22.png" />
+                                             </image>
+                                          </ImageView>
+                                          <TextField fx:id="p11" layoutX="54.0" layoutY="172.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p33" layoutX="54.0" layoutY="343.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p44" layoutX="247.0" layoutY="343.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <TextField fx:id="p22" layoutX="247.0" layoutY="172.0" prefHeight="25.0" prefWidth="112.0" text="0.25" />
+                                          <Label fx:id="L11" layoutX="88.0" layoutY="44.0" text="Selected" />
+                                          <Label fx:id="L31" layoutX="88.0" layoutY="219.0" text="Selected" />
+                                          <Label fx:id="L21" layoutX="281.0" layoutY="44.0" text="Selected" />
+                                          <Label fx:id="L41" layoutX="281.0" layoutY="219.0" text="Selected" />
+                                       </children>
+                                    </AnchorPane>
+                                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+                                       <children>
+                                          <Button layoutX="29.0" layoutY="14.0" mnemonicParsing="false" onAction="#resetProbabilitiesDotted" prefHeight="48.0" prefWidth="358.0" text="Reset Probabilities" textFill="#9a0000">
+                                             <font>
+                                                <Font name="System Bold" size="24.0" />
+                                             </font></Button>
+                                          <Button layoutX="29.0" layoutY="80.0" mnemonicParsing="false" onAction="#fillTiles" prefHeight="51.0" prefWidth="357.0" text="Fill Tiles" textAlignment="CENTER" textFill="#0f8300">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font></Button>
+                                          <Button layoutX="29.0" layoutY="151.0" mnemonicParsing="false" onAction="#deleteTile" prefHeight="54.0" prefWidth="354.0" text="Delete Tile" textFill="#cd0505">
+                                             <font>
+                                                <Font name="System Bold" size="23.0" />
+                                             </font></Button>
+                                          <Button layoutX="29.0" layoutY="215.0" mnemonicParsing="false" onAction="#deleteAll" prefHeight="63.0" prefWidth="355.0" text="Delete All Tiles" textFill="#c90000">
+                                             <font>
+                                                <Font name="System Bold" size="25.0" />
+                                             </font></Button>
+                                          <Button layoutX="29.0" layoutY="298.0" mnemonicParsing="false" onAction="#findMazeDotted" prefHeight="69.0" prefWidth="353.0" text="Find Maze!" textFill="#0cae00">
+                                             <font>
+                                                <Font name="Stencil" size="36.0" />
+                                             </font></Button>
+                                          <Button layoutX="32.0" layoutY="382.0" mnemonicParsing="false" onAction="#back" text="&lt;-Back" />
+                                       </children>
+                                    </AnchorPane>
+                                 </items>
+                              </SplitPane>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </HBox>
+      <HBox fx:id="g" layoutX="441.0" layoutY="18.0" prefHeight="864.0" prefWidth="1125.0" />
+   </children>
+</AnchorPane>

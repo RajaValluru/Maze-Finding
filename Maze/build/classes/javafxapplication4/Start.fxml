@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="javafxapplication4.StartController">
+   <children>
+      <Button fx:id="squareBtn" layoutX="223.0" layoutY="109.0" mnemonicParsing="false" onAction="#squareClicked" prefHeight="119.0" prefWidth="154.0" text="Square" textFill="#f50000">
+         <font>
+            <Font name="Georgia Bold" size="25.0" />
+         </font>
+      </Button>
+      <Button fx:id="hexagonBtn" layoutX="223.0" layoutY="248.0" mnemonicParsing="false" onAction="#hexagonClicked" prefHeight="119.0" prefWidth="154.0" text="Hexagon" textFill="#ff00d4">
+         <font>
+            <Font name="Georgia Bold" size="25.0" />
+         </font>
+      </Button>
+      <Text fill="#0300a8" layoutX="58.0" layoutY="75.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select a Tiling Shape">
+         <font>
+            <Font name="System Bold" size="50.0" />
+         </font>
+      </Text>
+   </children>
+</Pane>
